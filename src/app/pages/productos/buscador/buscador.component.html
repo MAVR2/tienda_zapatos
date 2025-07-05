@@ -1,0 +1,24 @@
+<!-- Opción 2: Diseño con Etiquetas Flotantes -->
+<div class="p-4 rounded-3 bg-light mb-4">
+    <div class="row g-3">
+        <div class="col-md-6">
+            <!-- Etiqueta flotante para el input -->
+            <div class="form-floating">
+                <input type="text" class="form-control" id="filtroNombre" placeholder="Buscar por nombre"
+                    [ngModel]="filtroNombre" (ngModelChange)="filtroNombreChange.emit($event)">
+                <label for="filtroNombre">Buscar por nombre</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <!-- Etiqueta flotante para el select -->
+            <div class="form-floating">
+                <select class="form-select" id="filtroCategoria" [ngModel]="categoriaSeleccionada"
+                    (ngModelChange)="categoriaSeleccionadaChange.emit(+$event)">
+                    <option [value]="0">Todas las categorías</option>
+                    <option *ngFor="let c of categorias" [value]="c.id">{{ c.nombre }}</option>
+                </select>
+                <label for="filtroCategoria">Filtrar por categoría</label>
+            </div>
+        </div>
+    </div>
+</div>

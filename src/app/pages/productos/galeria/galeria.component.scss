@@ -1,0 +1,23 @@
+.product-card {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra inicial muy suave */
+}
+
+/* El botón 'Añadir' está oculto por defecto */
+.product-card .add-to-cart-btn {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+/* Al pasar el mouse sobre la tarjeta... */
+.product-card:hover {
+    transform: translateY(-5px); /* La tarjeta se eleva */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* La sombra se intensifica */
+}
+
+/* ...el botón 'Añadir' aparece */
+.product-card:hover .add-to-cart-btn {
+    opacity: 1;
+    transform: translateY(0);
+}

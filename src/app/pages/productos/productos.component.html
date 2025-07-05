@@ -1,0 +1,11 @@
+<h2>Galería de Productos</h2>
+
+<app-buscador 
+[categorias]="categorias" 
+[filtroNombre]="filtroNombre" 
+(filtroNombreChange)="filtroNombre = $event"
+    [categoriaSeleccionada]="categoriaSeleccionada" 
+(categoriaSeleccionadaChange)="categoriaSeleccionada = $event">
+</app-buscador>
+
+<app-galeria [productos]="productosFiltrados"></app-galeria>
